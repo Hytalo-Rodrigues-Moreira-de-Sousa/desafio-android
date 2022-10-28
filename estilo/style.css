@@ -31,6 +31,10 @@ body{
     font-family: var(--fonte-padrao);
 }
 
+a.externo::after{
+    content: '\1F517';
+}
+
 header{
     background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
     min-height: 150px;
@@ -44,6 +48,7 @@ header > h1{
     margin-bottom: 20px;
     font-size: 3em;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
+    font-weight: normal;
 }
 
 header > p{
@@ -55,6 +60,7 @@ header > p{
     padding-right: 10px;
     padding-left: 10px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.315);
+    margin-bottom: 30px;
 }
 
 nav{
@@ -64,7 +70,7 @@ nav{
 }
 
 nav > a{
-    color: #fff;
+    color: var(--cor1);
     text-decoration: none;
     padding: 10px;
     font-weight: bold;
@@ -92,6 +98,8 @@ main{
 main h1{
     color: var(--cor5);
     font-family: var(--font-android);
+    font-weight: normal;
+    font-size: 1.8em;
 }
 
 main h2{
@@ -100,6 +108,7 @@ main h2{
     font-size: 1.3em;
     background-image: linear-gradient(to right, var(--cor1), transparent);
     text-indent: 8px;
+    font-weight: normal;
 }
 
 main p{
@@ -138,7 +147,59 @@ main img.pequena{
     display: block;
 }
 
+div.video{
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 58%;
+    position: relative;
+}
+
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside{
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.137);
+    margin-bottom: 13px;
+}
+
+aside > h3{
+    background-color: var(--cor4);
+    color: #fff;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+aside > ul{
+    list-style-type: '\2714\00A0\00A0';
+    list-style-position: inside;
+    columns: 2;
+}
+
 footer{
     background-color: var(--cor5);
     color: #fff;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer > p > a{
+    color:#fff;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color:var(--cor1);
 }
